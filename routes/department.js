@@ -18,3 +18,5 @@ router.post(
   isAdmin,
   createDepartment
 );
+
+module.exports = router;

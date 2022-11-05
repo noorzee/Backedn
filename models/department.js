@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema;
 
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
 const departmentSchema = new mongoose.Schema({
     departmentName: {
         type: String,
-        required: true,
-        unique: true
+        required: true
       },
       departmentCode: {
         type: String,
@@ -14,7 +14,7 @@ const departmentSchema = new mongoose.Schema({
         unique: true
       },
       facultyId: {
-        type: Schema.Types.ObjectId,
+        type: ObjectId,
         required: true,
         ref: 'facultySchema'
       }
